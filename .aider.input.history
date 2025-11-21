@@ -1,0 +1,178 @@
+
+# 2025-11-21 10:55:15.869224
++Code the following app
++```
++Create a “GemSlide Fusion” Game on the Home Page
++
++Build a puzzle game called GemSlide Fusion, played on a 5×5 grid. Instead of numbers, each tile represents a gem with a color and tier. The player moves tiles using four on-screen arrow buttons (Up, Down, Left, Right), arranged directly below the grid in a typical keyboard arrow-key layout.
++
++Gameplay Mechanics
++
++The game starts with three random gem tiles on the board.
++After every move, one new gem spawns in a random empty tile.
++
++Gems have tiers instead of numbers:
++
++Tier 1 (Common)
++Tier 2 (Uncommon)
++Tier 3 (Rare)
++Tier 4 (Epic)
++Tier 5 (Legendary)
++
++Spawning Rules
++
++New gems spawn with these probabilities:
++
++Tier 1: 70%
++Tier 2: 25%
++Tier 3: 5%
++
++Higher tiers can only be formed through merging.
++
++Movement Rules
++When an arrow is pressed, all gems slide as far as possible in that direction, stopping only when they:
++Hit another gem, or
++Reach the edge of the grid
++If two gems of the same tier collide, they fuse into a single gem of the next tier.
++A fused gem cannot fuse again in the same move, even if another matching gem lands on it.
++
++Special Collision Cases
++
++If three identical gems line up and the player moves toward them:
++Only the two gems farthest in the direction of movement will merge.
++If all five tiles in a row or column contain the same tier, a parallel move merges:
++
++The first two gems,
++
++And the last two gems
++(Resulting in two merged gems plus one leftover in the center.)
++
++Scoring
++
++The score is shown in the upper-right corner.
++
++Score = sum of tier values, where:
++
++Tier 1 = 1 point
++
++Tier 2 = 3 points
++
++Tier 3 = 9 points
++
++Tier 4 = 27 points
++
++Tier 5 = 81 points
++
++Fusing gives bonus points equal to the value of the resulting gem.
++
++Winning Condition
++
++The game is won when a Tier 5 (Legendary Gem) appears anywhere on the board.
++
++Players may continue playing to achieve higher scores.
++
++Game Over Condition
++
++The game ends when:
++
++There are no empty tiles, and
++
++No adjacent tiles have the same tier
++
++When the game ends, the user should be able to share their score.
++
++Placement
++
++Place the GemSlide Fusion game directly on the home page.
++```
++
++Generate an app logo and update the app metadata title and description.
+
+# 2025-11-21 10:55:15.869983
++Code the following app
++```
++Create a “GemSlide Fusion” Game on the Home Page
++
++Build a puzzle game called GemSlide Fusion, played on a 5×5 grid. Instead of numbers, each tile represents a gem with a color and tier. The player moves tiles using four on-screen arrow buttons (Up, Down, Left, Right), arranged directly below the grid in a typical keyboard arrow-key layout.
++
++Gameplay Mechanics
++
++The game starts with three random gem tiles on the board.
++After every move, one new gem spawns in a random empty tile.
++
++Gems have tiers instead of numbers:
++
++Tier 1 (Common)
++Tier 2 (Uncommon)
++Tier 3 (Rare)
++Tier 4 (Epic)
++Tier 5 (Legendary)
++
++Spawning Rules
++
++New gems spawn with these probabilities:
++
++Tier 1: 70%
++Tier 2: 25%
++Tier 3: 5%
++
++Higher tiers can only be formed through merging.
++
++Movement Rules
++When an arrow is pressed, all gems slide as far as possible in that direction, stopping only when they:
++Hit another gem, or
++Reach the edge of the grid
++If two gems of the same tier collide, they fuse into a single gem of the next tier.
++A fused gem cannot fuse again in the same move, even if another matching gem lands on it.
++
++Special Collision Cases
++
++If three identical gems line up and the player moves toward them:
++Only the two gems farthest in the direction of movement will merge.
++If all five tiles in a row or column contain the same tier, a parallel move merges:
++
++The first two gems,
++
++And the last two gems
++(Resulting in two merged gems plus one leftover in the center.)
++
++Scoring
++
++The score is shown in the upper-right corner.
++
++Score = sum of tier values, where:
++
++Tier 1 = 1 point
++
++Tier 2 = 3 points
++
++Tier 3 = 9 points
++
++Tier 4 = 27 points
++
++Tier 5 = 81 points
++
++Fusing gives bonus points equal to the value of the resulting gem.
++
++Winning Condition
++
++The game is won when a Tier 5 (Legendary Gem) appears anywhere on the board.
++
++Players may continue playing to achieve higher scores.
++
++Game Over Condition
++
++The game ends when:
++
++There are no empty tiles, and
++
++No adjacent tiles have the same tier
++
++When the game ends, the user should be able to share their score.
++
++Placement
++
++Place the GemSlide Fusion game directly on the home page.
++```
++
++Generate an app logo and update the app metadata title and description.
