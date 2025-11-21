@@ -176,3 +176,25 @@
 +```
 +
 +Generate an app logo and update the app metadata title and description.
+
+# 2025-11-21 11:08:50.567361
++GemSlide Fusion is played on a simple 5×5 grid, with square gem tiles that can be moved using the four onscreen arrow buttons. The arrow buttons are placed below the grid in the same arrangement they usually appear on a keyboard. The game begins with three tiles already in the grid, each showing a gem with a value of either 1 or 2, and another tile appears in a random empty space after each turn. Tiles with a value of 1 appear 80% of the time, and tiles with a value of 2 appear 20% of the time. Tiles slide as far as possible in the pressed arrow’s direction until they are stopped by either another tile or the edge of the grid. If two tiles with the same number collide while moving, they merge into a single tile with a value equal to the sum of the two tiles that collided. The resulting tile cannot merge with another tile again in the same move.
++
++If a move causes three consecutive tiles of the same value to slide together, only the two tiles farthest along the direction of motion will combine. If all five spaces in a row or column are filled with tiles of the same value, a move parallel to that row or column will combine the first two tiles and the last two tiles. A scoreboard on the upper-right keeps track of the user’s score. The user’s score is equal to the sum of all tiles currently on the board.
++
++The game is won when a tile with a value of 1024 appears on the board. Players can continue beyond that to reach higher scores. When the player has no legal moves (there are no empty spaces and no adjacent tiles with the same value), the game ends.
++
++The user should be able to share their score once the game is over.
++
++Place the GemSlide Fusion game on the home page.
+
+# 2025-11-21 11:08:50.568831
++GemSlide Fusion is played on a simple 5×5 grid, with square gem tiles that can be moved using the four onscreen arrow buttons. The arrow buttons are placed below the grid in the same arrangement they usually appear on a keyboard. The game begins with three tiles already in the grid, each showing a gem with a value of either 1 or 2, and another tile appears in a random empty space after each turn. Tiles with a value of 1 appear 80% of the time, and tiles with a value of 2 appear 20% of the time. Tiles slide as far as possible in the pressed arrow’s direction until they are stopped by either another tile or the edge of the grid. If two tiles with the same number collide while moving, they merge into a single tile with a value equal to the sum of the two tiles that collided. The resulting tile cannot merge with another tile again in the same move.
++
++If a move causes three consecutive tiles of the same value to slide together, only the two tiles farthest along the direction of motion will combine. If all five spaces in a row or column are filled with tiles of the same value, a move parallel to that row or column will combine the first two tiles and the last two tiles. A scoreboard on the upper-right keeps track of the user’s score. The user’s score is equal to the sum of all tiles currently on the board.
++
++The game is won when a tile with a value of 1024 appears on the board. Players can continue beyond that to reach higher scores. When the player has no legal moves (there are no empty spaces and no adjacent tiles with the same value), the game ends.
++
++The user should be able to share their score once the game is over.
++
++Place the GemSlide Fusion game on the home page.
