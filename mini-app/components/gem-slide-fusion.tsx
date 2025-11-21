@@ -37,10 +37,7 @@ function spawnTile(grid: Tile[][]): Tile[][] {
   if (emptyCells.length === 0) return grid;
   const [r, c] = emptyCells[Math.floor(Math.random() * emptyCells.length)];
   const rand = Math.random();
-  let tier = 1;
-  if (rand < 0.7) tier = 1;
-  else if (rand < 0.95) tier = 2;
-  else tier = 3;
+  const tier = rand < 0.8 ? 1 : 2; // 80% 1, 20% 2
   const newGrid = grid.map(row => row.map(cell => ({ ...cell })));
   newGrid[r][c] = { tier, merged: false };
   return newGrid;
@@ -50,12 +47,33 @@ function moveLine(line: Tile[], dir: "left" | "right"): Tile[] {
   const tiles = line.filter(t => t.tier > 0);
   const result: Tile[] = [];
   let i = 0;
+  // Special case: all five tiles same value
+  if (tiles.length === 5 && tiles.every(t => t.tier === tiles[0].tier)) {
+    const v = tiles[0].tier;
+    result.push({ tier: v * 2, merged: true });
+    result.push({ tier: v, merged: false });
+    result.push({ tier: v * 2, merged: true });
+    // Pad remaining slots
+    while (result.length < GRID_SIZE) {
+      result.push({ tier: 0, merged: false });
+    }
+    return dir === "left" ? result : result.reverse();
+  }
   while (i < tiles.length) {
-    if (i + 1 < tiles.length && tiles[i].tier === tiles[i + 1].tier && !tiles[i].merged && !tiles[i + 1].merged) {
-      result.push({ tier: tiles[i].tier + 1, merged: true });
+    // Special case: three consecutive same values
+    if (i + 2 < tiles.length && tiles[i].tier === tiles[i + 1].tier && tiles[i + 1].tier === tiles[i + 2].tier) {
+      // Merge the last two
+      result.push({ tier: tiles[i].tier, merged: false });
+      result.push({ tier: tiles[i + 1].tier * 2, merged: true });
+      i += 3;
+      continue;
+    }
+    // Normal merge
+    if (i + 1 < tiles.length && tiles[i].tier === tiles[i + 1].tier) {
+      result.push({ tier: tiles[i].tier * 2, merged: true });
       i += 2;
     } else {
-      result.push({ ...tiles[i], merged: false });
+      result.push({ tier: tiles[i].tier, merged: false });
       i += 1;
     }
   }
@@ -114,7 +132,7 @@ export default function GemSlideFusion() {
     for (let r = 0; r < GRID_SIZE; r++) {
       for (let c = 0; c < GRID_SIZE; c++) {
         const tier = newGrid[r][c].tier;
-        if (tier > 0) s += TIER_POINTS[tier];
+        if (tier > 0) s += tier; // score equals sum of tile values
       }
     }
     setScore(s);
@@ -127,7 +145,7 @@ export default function GemSlideFusion() {
     const newGrid = spawnTile(moved);
     setGrid(newGrid);
     updateScore(newGrid);
-    if (newGrid.some(row => row.some(cell => cell.tier === 5))) setWon(true);
+    if (newGrid.some(row => row.some(cell => cell.tier === 1024))) setWon(true);
     if (!hasMoves(newGrid)) setGameOver(true);
   };
 
