@@ -1,3 +1,3 @@
-export const title = "Mini App Factory App";
-export const description = "This app was created by the Mini App Factory!";
+export const title = "GemSlide Fusion";
+export const description = "Play GemSlide Fusion, a 5×5 gem merging puzzle game.";
 export const url = process.env.NEXT_PUBLIC_URL;
