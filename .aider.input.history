@@ -198,3 +198,17 @@
 +The user should be able to share their score once the game is over.
 +
 +Place the GemSlide Fusion game on the home page.
+
+# 2025-11-21 11:44:09.359801
++GemSlide Fusion is played on a simple 5×5 grid with square gem tiles that can be moved using four onscreen arrow buttons. The arrow buttons are placed below the grid in the same layout as the arrow keys on a keyboard. The game starts with three tiles on the grid, each with a value of 1 or 2. After every move, one new tile with a value of 1 or 2 appears in a random empty space. When the player presses an arrow button, all tiles slide as far as possible in that direction until they hit another tile or the edge of the grid. If two tiles with the same value collide while moving, they merge into a single tile with the sum of their values. A merged tile cannot merge again in the same move.
++
++A scoreboard on the upper-right keeps track of the user’s score. The score is equal to the sum of all tile values on the board. The game is won when a tile with a value of 1024 appears on the board. The game ends when there are no empty spaces and no possible merges left. When the game is over, the user should be able to share their score.
++
++Place the GemSlide Fusion game on the home page.
+
+# 2025-11-21 11:44:09.360388
++GemSlide Fusion is played on a simple 5×5 grid with square gem tiles that can be moved using four onscreen arrow buttons. The arrow buttons are placed below the grid in the same layout as the arrow keys on a keyboard. The game starts with three tiles on the grid, each with a value of 1 or 2. After every move, one new tile with a value of 1 or 2 appears in a random empty space. When the player presses an arrow button, all tiles slide as far as possible in that direction until they hit another tile or the edge of the grid. If two tiles with the same value collide while moving, they merge into a single tile with the sum of their values. A merged tile cannot merge again in the same move.
++
++A scoreboard on the upper-right keeps track of the user’s score. The score is equal to the sum of all tile values on the board. The game is won when a tile with a value of 1024 appears on the board. The game ends when there are no empty spaces and no possible merges left. When the game is over, the user should be able to share their score.
++
++Place the GemSlide Fusion game on the home page.
