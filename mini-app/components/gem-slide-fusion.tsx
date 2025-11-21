@@ -150,7 +150,7 @@ export default function GemSlideFusion() {
   };
 
   return (
-    <div className="flex flex-col items-center gap-4">
+    <div className="relative flex flex-col items-center gap-4">
       <div className="relative">
         <div className="grid grid-cols-5 gap-1">
           {grid.map((row, r) =>
@@ -207,9 +207,9 @@ export default function GemSlideFusion() {
           </div>
         </div>
       </div>
-      <div className="flex items-center gap-4">
+      <div className="absolute top-4 right-4 flex items-center gap-4">
         <span className="text-xl">Score: {score}</span>
-        {won && <span className="text-green-600 font-bold">Legendary Gem Achieved!</span>}
+        {won && <span className="text-green-600 font-bold">1024 Gem Achieved!</span>}
         {gameOver && !won && <span className="text-red-600 font-bold">Game Over</span>}
       </div>
       {(won || gameOver) && (
