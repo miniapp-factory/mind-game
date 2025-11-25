@@ -1,4 +1,5 @@
 import { description, title } from "@/lib/metadata";
+import Quiz from "@/components/quiz";
 import { generateMetadata } from "@/lib/farcaster-embed";
 
 export { generateMetadata };
